@@ -1,0 +1,97 @@
+
+          <html>
+    <head>
+    <style>
+        body {
+          background-image:url("{{url_for('static', filename='image2.jpg')}}");
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: 100% 100%;
+        }
+        </style>
+        <style>
+            .butto    display: inline-block;
+              padding: 10px 15px;
+              font-size: 24px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              outline: none;
+              color: #fff;
+              background-color: #4CAF50;
+              border: none;
+              border-radius: 10px;
+              /* box-shadow: 0 9px #999; */
+            }
+            
+            .button:hover {background-color: #3e8e41}
+            
+            .button:active {
+              background-color: #3e8e41;
+              /* box-shadow: 0 5px #666; */
+              transform: translateY(4px);
+            }
+            </style>
+        </head>
+<body>
+    <!-- <img src="{{url_for('static', filename='image1.jpg')}}" /> -->
+    <p style="margin-left:33%;font-size: 60px;;margin-top:10%;color:indigo;background-color:white;width:37%;text-align: center;"> CO2 Emission From Cars</p>
+    <div style="margin-left:15%;margin-top:5%;">
+<form action ="/predict" method = "POST">
+    
+   <table CELLPADDING=5> 
+ <tr>   
+ <td>       
+<b style="color:black;font-size: 18px">MODELYEAR</b>
+ <p><input type = "text" name = "MODELYEAR"/></p>
+ <br>
+</td>
+
+
+<td>
+ <b style="color: black;font-size: 18px">ENGINESIZE</b>
+ <p><input type = "text" name = "ENGINESIZE"/></p>
+ <br>
+</td>
+<td>
+ <b style="color: black;font-size: 18px">CYLINDERS</b>
+ <p><input type = "text" name = "CYLINDERS"/></p>
+ <br>
+</td>
+</tr>
+
+
+<td>
+ <b style="color: black;font-size: 18px">FUELCONSUMPTION_CITY </b>
+ <p><input type = "text" name = "FUELCONSUMPTION_CITY"/></p>
+</td>
+<td>
+ <b style="color: black;font-size: 18px">FUELCONSUMPTION_HWY </b>
+ <p><input type = "text" name = "FUELCONSUMPTION_HWY"/></p>
+</td>
+<td>
+ <b style="color: black;font-size: 18px">FUELCONSUMPTION_COMB </b>
+ <p><input type = "text" name = "FUELCONSUMPTION_COMB"/></p>
+</td>
+</tr>
+</p>
+<tr>
+  <td>
+    <b style="color: black;font-size: 18px"> FUELCONSUMPTION_COMB_MPG</b>
+    <p><input type = "text" name = "FUELCONSUMPTION_COMB_MPG"/></p>  
+   </td>
+</tr>
+<tr>
+    <td><button class="button" onclick="submit">submit</button><br>
+    </td>
+</tr>
+<tr>
+    <td>
+<p style="color: cornsilk;"><h2 style="background-color: blue;text-align: center;width:100%;">{{y}}</h2></p>
+</td
+</tr>
+</table>
+</form>
+</div>
+</body>
+</html>
